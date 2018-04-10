@@ -1,0 +1,4 @@
+/MacOSX*.sdk/usr/share
+/MacOSX*.sdk/**/*.o
+/MacOSX*.sdk/**/*.a
+/MacOSX*.sdk/**/*.tbd
