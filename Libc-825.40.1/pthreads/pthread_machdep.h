@@ -197,6 +197,7 @@
 ** This number can grow dynamically, no need to fix it.
 */
 
+#ifndef OBJC_PORT
 
 #if defined(__cplusplus)
 extern "C" {
@@ -297,6 +298,8 @@ _pthread_setspecific_direct(unsigned long slot, void * val)
 
 #define LOCK_INIT(l)	((l) = 0)
 #define LOCK_INITIALIZER 0
+
+#endif // [port] OBJC_PORT
 
 #endif /* ! __ASSEMBLER__ */
 #endif /* _POSIX_PTHREAD_MACHDEP_H */
