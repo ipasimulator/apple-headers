@@ -1,4 +1,6 @@
 /MacOSX*.sdk/usr/share
-/MacOSX*.sdk/**/*.o
-/MacOSX*.sdk/**/*.a
+/MacOSX*.sdk/**/*.[o,a]
 /MacOSX*.sdk/**/*.tbd
+
+/Libc-*/*/**
+!/Libc-*/pthreads/pthread_machdep.h
