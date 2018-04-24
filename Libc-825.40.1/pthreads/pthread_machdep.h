@@ -212,6 +212,8 @@ int       pthread_key_init_np(int, void (*)(void *));
 }
 #endif
 
+#endif // [port] OBJC_PORT
+
 typedef int pthread_lock_t;
 
 __inline__ static int
@@ -233,7 +235,8 @@ _pthread_has_direct_tsd(void)
 }
 
 #if TARGET_IPHONE_SIMULATOR || defined(__ppc__) || defined(__ppc64__) || \
-	(defined(__arm__) && !defined(_ARM_ARCH_7) && defined(_ARM_ARCH_6) && defined(__thumb__))
+	(defined(__arm__) && !defined(_ARM_ARCH_7) && defined(_ARM_ARCH_6) && defined(__thumb__)) \
+    || defined(OBJC_PORT) // [port] CHANGE: We wan't these instead of the assembly ones below.
 
 #define _pthread_getspecific_direct(key) pthread_getspecific((key))
 #define _pthread_setspecific_direct(key, val) pthread_setspecific((key), (val))
@@ -298,8 +301,6 @@ _pthread_setspecific_direct(unsigned long slot, void * val)
 
 #define LOCK_INIT(l)	((l) = 0)
 #define LOCK_INITIALIZER 0
-
-#endif // [port] OBJC_PORT
 
 #endif /* ! __ASSEMBLER__ */
 #endif /* _POSIX_PTHREAD_MACHDEP_H */
