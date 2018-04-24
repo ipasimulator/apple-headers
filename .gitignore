@@ -4,3 +4,7 @@
 
 /Libc-*/*/**
 !/Libc-*/pthreads/pthread_machdep.h
+
+/dyld-*/*/**
+/dyld-*/*.*
+!/dyld-*/include/objc-shared-cache.h
