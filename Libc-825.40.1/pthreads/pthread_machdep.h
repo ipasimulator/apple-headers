@@ -58,6 +58,9 @@
 #include <TargetConditionals.h>
 #include <stdint.h>
 
+// [port] CHANGED: Not supporting direct pthread keys.
+#ifndef OBJC_PORT
+
 /*
 ** Define macros for inline pthread_getspecific() usage.
 ** We reserve a number of slots for Apple internal use.
@@ -197,8 +200,6 @@
 ** This number can grow dynamically, no need to fix it.
 */
 
-#ifndef OBJC_PORT
-
 #if defined(__cplusplus)
 extern "C" {
 #endif
@@ -212,7 +213,8 @@ int       pthread_key_init_np(int, void (*)(void *));
 }
 #endif
 
-#endif // [port] OBJC_PORT
+// [port] !OBJC_PORT
+#endif
 
 typedef int pthread_lock_t;
 
