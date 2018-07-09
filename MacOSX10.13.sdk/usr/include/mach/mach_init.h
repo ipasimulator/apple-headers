@@ -58,24 +58,45 @@
 #ifndef	_MACH_INIT_
 #define	_MACH_INIT_	1
 
+// [port] CHANGED: Not needed.
+#if !defined(OBJC_PORT)
+
 #include <mach/mach_types.h>
 #include <mach/vm_page_size.h>
 #include <stdarg.h>
 
 #include <sys/cdefs.h>
 
+// [port] !defined(OBJC_PORT)
+#endif
+
 /*
  *	Kernel-related ports; how a task/thread controls itself
  */
 
 __BEGIN_DECLS
+
+// [port] CHANGED: Not needed.
+#if !defined(OBJC_PORT)
+
 extern mach_port_t mach_host_self(void);
 extern mach_port_t mach_thread_self(void);
 extern kern_return_t host_page_size(host_t, vm_size_t *);
 
+// [port] !defined(OBJC_PORT)
+#endif
+
+// [port] CHANGED: mach_port_t is undefined.
+#if defined(OBJC_PORT)
+#define	mach_task_self() 0
+#else
 extern mach_port_t	mach_task_self_;
 #define	mach_task_self() mach_task_self_
 #define	current_task()	mach_task_self()
+#endif
+
+// [port] CHANGED: Not needed.
+#if !defined(OBJC_PORT)
 
 __END_DECLS
 #include <mach/mach_traps.h>
@@ -104,6 +125,9 @@ extern	mach_port_t	bootstrap_port;
  *	application to point to a user-specified output function
  */
 extern int (*vprintf_stderr_func)(const char *format, va_list ap);
+
+// [port] !defined(OBJC_PORT)
+#endif
 
 __END_DECLS
 

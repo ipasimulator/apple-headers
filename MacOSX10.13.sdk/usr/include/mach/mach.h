@@ -66,6 +66,7 @@
 #if defined(OBJC_PORT)
 #include <mach/vm_types.h> 	  // [port] for vm_address_t
 #include <mach/kern_return.h> // [port] for kern_return_t
+#include <mach/mach_init.h>	  // [port] for mach_task_self
 #else
 
 #include <mach/std_types.h>
