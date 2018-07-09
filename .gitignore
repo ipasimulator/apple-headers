@@ -17,3 +17,13 @@
 
 /libclosure-*/**
 !/libclosure-*/Block_private.h
+
+/xnu-*/*/*/**
+/xnu-*/*/*.*
+/xnu-*/*.*
+/xnu-*/**/Makefile
+/xnu-*/**/newvers
+/xnu-*/**/MASTER
+/xnu-*/**/MasterVersion
+/xnu-*/**/*blacklist*
+!/xnu-*/bsd/sys/reason.h
