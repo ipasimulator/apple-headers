@@ -13,3 +13,6 @@
 /libplatform-*/*/*.*
 /libplatform-*/*.*
 !/libplatform-*/private/os/lock_private.h
+
+/libclosure-*/**
+!/libclosure-*/Block_private.h
