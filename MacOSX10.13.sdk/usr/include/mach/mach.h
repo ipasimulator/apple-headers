@@ -62,6 +62,12 @@
 #define __MACH30__
 #define MACH_IPC_FLAVOR UNTYPED
 
+// [port] CHANGED: Including only what's needed.
+#if defined(OBJC_PORT)
+#include <mach/vm_types.h> 	  // [port] for vm_address_t
+#include <mach/kern_return.h> // [port] for kern_return_t
+#else
+
 #include <mach/std_types.h>
 #include <mach/mach_types.h>
 #include <mach/mach_interface.h>
@@ -240,5 +246,8 @@ extern voucher_mach_msg_state_t voucher_mach_msg_adopt(mach_msg_header_t *msg);
 extern void voucher_mach_msg_revert(voucher_mach_msg_state_t state);
 
 __END_DECLS
+
+// [port] !defined(OBJC_PORT)
+#endif
 
 #endif	/* _MACH_H_ */

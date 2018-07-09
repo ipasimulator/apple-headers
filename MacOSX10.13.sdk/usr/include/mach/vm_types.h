@@ -32,7 +32,10 @@
 #ifndef	_MACH_VM_TYPES_H_
 #define _MACH_VM_TYPES_H_
 
+// [port] CHANGED: Not needed.
+#if !defined(OBJC_PORT)
 #include <mach/port.h>
+#endif
 #include <mach/machine/vm_types.h>
 
 #include <stdint.h>
@@ -68,7 +71,8 @@ typedef	uint32_t	reg64_t;
 typedef uint32_t ppnum_t;		/* Physical page number */
 #define PPNUM_MAX UINT32_MAX
 
-
+// [port] CHANGED: mach_port_t is undefined.
+#if !defined(OBJC_PORT)
 
 typedef mach_port_t		vm_map_t;
 
@@ -88,6 +92,8 @@ typedef uint64_t		vm_object_size_t;
 typedef mach_port_t		upl_t;
 typedef mach_port_t		vm_named_entry_t;
 
+// [port] !defined(OBJC_PORT)
+#endif
 
 #define UPL_NULL		((upl_t) 0)
 #define VM_NAMED_ENTRY_NULL	((vm_named_entry_t) 0)
