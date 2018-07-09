@@ -67,6 +67,7 @@
 #include <mach/vm_types.h> 	  // [port] for vm_address_t
 #include <mach/kern_return.h> // [port] for kern_return_t
 #include <mach/mach_init.h>	  // [port] for mach_task_self
+#include <mach/vm_statistics.h> // [port] for VM_*
 #else
 
 #include <mach/std_types.h>

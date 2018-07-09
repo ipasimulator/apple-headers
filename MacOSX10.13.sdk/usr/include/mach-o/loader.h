@@ -23,6 +23,11 @@
 #ifndef _MACHO_LOADER_H_
 #define _MACHO_LOADER_H_
 
+// [port] TODO: Don't do this.
+#if defined(OBJC_PORT)
+#include <mach/vm_statistics.h>
+#endif
+
 /*
  * This file describes the format of mach object files.
  */
