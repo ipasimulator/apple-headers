@@ -238,7 +238,7 @@ _pthread_has_direct_tsd(void)
 
 #if TARGET_IPHONE_SIMULATOR || defined(__ppc__) || defined(__ppc64__) || \
 	(defined(__arm__) && !defined(_ARM_ARCH_7) && defined(_ARM_ARCH_6) && defined(__thumb__)) \
-    || defined(OBJC_PORT) // [port] CHANGED: We wan't these instead of the assembly ones below.
+    || defined(OBJC_PORT) // [port] CHANGED: We want these instead of the assembly ones below.
 
 #define _pthread_getspecific_direct(key) pthread_getspecific((key))
 #define _pthread_setspecific_direct(key, val) pthread_setspecific((key), (val))
