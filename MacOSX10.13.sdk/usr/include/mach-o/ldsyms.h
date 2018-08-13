@@ -87,6 +87,11 @@ _mh_bundle_header;
  */
 #define _MH_DYLIB_SYM	"__mh_dylib_header"
 #define MH_DYLIB_SYM	"_mh_dylib_header"
+// [port] CHANGED: If this was not marked `extern "C"`, it would be mangled badly.
+// [port] TODO: How come this works in the original code?
+#if defined(OBJC_PORT)
+extern "C"
+#endif
 extern const struct
 #ifdef __LP64__
 mach_header_64
