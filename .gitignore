@@ -5,9 +5,11 @@
 /Libc-*/*/**
 !/Libc-*/pthreads/pthread_machdep.h
 
-/dyld-*/*/**
+/dyld-*/*/*/**
+/dyld-*/*/*.*
 /dyld-*/*.*
 !/dyld-*/include/objc-shared-cache.h
+!/dyld-*/include/mach-o/dyld_priv.h
 
 /libplatform-*/*/*/**
 /libplatform-*/*/*.*
