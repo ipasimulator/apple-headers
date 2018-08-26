@@ -29,3 +29,6 @@
 /xnu-*/**/MasterVersion
 /xnu-*/**/*blacklist*
 !/xnu-*/bsd/sys/reason.h
+
+# Git Time Metric
+/.gtm/
