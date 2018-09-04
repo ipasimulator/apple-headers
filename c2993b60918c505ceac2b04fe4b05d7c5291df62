@@ -1,0 +1,9 @@
+[ver:1,total:2040]
+iPhoneOS11.1.sdk/usr/lib/libobjc.A.tbd:740,1536001200:380,1536015600:180,1536040800:180,r
+.gitattributes:630,1536040800:630,m
+../../.git/modules/deps/apple-headers/hooks/post-commit:360,1535306400:180,1535742000:180,r
+iPhoneOS11.1.sdk/usr/lib/libobjc.tbd:140,1536001200:140,r
+.gitignore:60,1536040800:60,r
+iPhoneOS11.1.sdk/System/Library/Frameworks/Accelerate.framework/Modules/module.modulemap:60,1536001200:60,r
+iPhoneOS11.1.sdk/usr/lib/IOABPLib.tbd:30,1536040800:30,r
+iPhoneOS11.1.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate.tbd:20,1536001200:20,r
