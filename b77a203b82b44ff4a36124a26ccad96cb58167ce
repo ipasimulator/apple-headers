@@ -1,0 +1,14 @@
+[ver:1,total:3360]
+iPhoneOS11.1.sdk/usr/lib/libobjc.A.tbd:1470,1536040800:360,1536044400:390,1536048000:540,1536055200:180,r
+README.md:360,1536184800:240,1536303600:120,m
+iPhoneOS11.1.sdk/usr/include/objc/objc.h:360,1536235200:180,1536249600:180,r
+iPhoneOS11.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation.tbd:180,1536048000:180,r
+iPhoneOS11.1.sdk/usr/include/sys/cdefs.h:180,1536246000:180,r
+.gitattributes:180,1536040800:180,r
+xnu-4570.41.2/.upstream_base_commits:180,1536184800:180,r
+iPhoneOS11.1.sdk/System/Library/Frameworks/module.map:150,1536044400:150,r
+iPhoneOS11.1.sdk/usr/lib/libSystem.B.tbd:150,1536044400:90,1536048000:60,r
+iPhoneOS11.1.sdk/usr/lib/libSystem.tbd:60,1536048000:60,r
+iPhoneOS11.1.sdk/System/Library/TextInput/libTextInputCore.tbd:30,1536044400:30,r
+xnu-4570.41.2/bsd/sys/cdefs.h:30,1536246000:30,r
+iPhoneOS11.1.sdk/usr/include/sys/types.h:30,1536246000:30,r
