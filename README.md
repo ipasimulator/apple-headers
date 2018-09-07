@@ -9,3 +9,9 @@ Similarly the `MacOSX*.sdk`.
 The other folders are other Apple libraries obtained from the official [tarball repository](https://opensource.apple.com/tarballs/).
 
 Not everything from the original SDK and libraries is included, though, see [the `.gitignore` file](.gitignore) for more information on what's excluded.
+
+## Git tags
+
+We use the following tags as prefixes to commit messages:
+
+- `[dyld]`, `[iOS]`, `[Libc]`, `[closure]`, `[plat]`, `[macOS]`, `[xnu]`: Those correspond to the root folders.
