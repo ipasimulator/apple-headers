@@ -75,13 +75,10 @@
 #define	__END_DECLS
 #endif
 
-// [port] TODO: Why is this warning issued even though we use clang?
-#if !defined(OBJC_PORT)
 /* This SDK is designed to work with clang and specific versions of
  * gcc >= 4.0 with Apple's patch sets */
 #if !defined(__GNUC__) || __GNUC__ < 4
 #warning "Unsupported compiler detected"
-#endif
 #endif
 
 /*
@@ -118,10 +115,6 @@
 
 #define	__const		const		/* define reserved names to standard */
 #define	__signed	signed
-// [port] CHANGED: We must first undefine what MSVC headers defined.
-#if defined(OBJC_PORT)
-#   undef __volatile
-#endif
 #define	__volatile	volatile
 #if defined(__cplusplus)
 #define	__inline	inline		/* convert to C++ keyword */
@@ -588,8 +581,6 @@
 #define __DARWIN_EXTSN(sym)		__asm("_" __STRING(sym) __DARWIN_SUF_EXTSN)
 #define __DARWIN_EXTSN_C(sym)		__asm("_" __STRING(sym) __DARWIN_SUF_EXTSN __DARWIN_SUF_NON_CANCELABLE)
 
-// [port] CHANGED: Not needed.
-#if !defined(OBJC_PORT)
 /*
  * symbol release macros
  */
@@ -601,7 +592,6 @@
 #define __DARWIN_ALIAS_STARTING(_mac, _iphone, x)   __DARWIN_ALIAS_STARTING_MAC_##_mac(x)
 #else
 #define __DARWIN_ALIAS_STARTING(_mac, _iphone, x)   x
-#endif
 #endif
 
 
@@ -659,13 +649,10 @@
 #define _POSIX_C_SOURCE         198808L
 #endif
 
-// [port] CHANGED: Not needed.
-#if !defined(OBJC_PORT)
 /* POSIX C deprecation macros */
 #include <sys/_posix_availability.h>
 
 #define __POSIX_C_DEPRECATED(ver) ___POSIX_C_DEPRECATED_STARTING_##ver
-#endif
 
 /*
  * Set a single macro which will always be defined and can be used to determine
