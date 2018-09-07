@@ -8,3 +8,8 @@
 /dyld-*/*/**
 /dyld-*/*.*
 !/dyld-*/include/objc-shared-cache.h
+
+/libplatform-*/*/*/**
+/libplatform-*/*/*.*
+/libplatform-*/*.*
+!/libplatform-*/private/os/lock_private.h
