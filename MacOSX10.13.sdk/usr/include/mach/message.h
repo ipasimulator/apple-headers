@@ -78,7 +78,9 @@
 #include <mach/machine/vm_types.h>
 
 #include <sys/cdefs.h>
+#if !defined(OBJC_PORT)
 #include <sys/appleapiopts.h>
+#endif
 #include <Availability.h>
 
 /*

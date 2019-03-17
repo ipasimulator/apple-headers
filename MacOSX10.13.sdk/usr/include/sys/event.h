@@ -56,7 +56,9 @@
 #ifndef _SYS_EVENT_H_
 #define _SYS_EVENT_H_
 
+#if !defined(OBJC_PORT)
 #include <machine/types.h>
+#endif
 #include <sys/cdefs.h>
 #include <stdint.h>
 

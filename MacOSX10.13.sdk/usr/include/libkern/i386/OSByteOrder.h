@@ -30,8 +30,10 @@
 #define _OS_OSBYTEORDERI386_H
 
 #include <stdint.h>
+#if !defined(OBJC_PORT)
 #include <libkern/i386/_OSByteOrder.h>
 #include <sys/_types/_os_inline.h>
+#endif
 
 /* Functions for byte reversed loads. */
 

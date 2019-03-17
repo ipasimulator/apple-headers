@@ -123,11 +123,17 @@ typedef mach_port_name_t *mach_port_name_array_t;
  *
  */
 
+#if defined(OBJC_PORT)
+typedef unsigned int mach_port_t;
+#else
 #include <sys/_types.h>
 #include <sys/_types/_mach_port_t.h>
 
 
 typedef mach_port_t			*mach_port_array_t;
+
+// !defined(OBJC_PORT)
+#endif
 
 /*
  *  MACH_PORT_NULL is a legal value that can be carried in messages.
